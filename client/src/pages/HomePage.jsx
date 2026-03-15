@@ -20,7 +20,7 @@ const HomePage = () => {
           return;
         }
 
-        const res = await fetch("http://localhost:5000/api/solved", {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/solved`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -60,7 +60,7 @@ const HomePage = () => {
         return { success: false };
       }
 
-      const res = await fetch("http://localhost:5000/api/submit-ans", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/submit-ans`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

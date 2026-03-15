@@ -16,7 +16,7 @@ const PublicRoute = () => {
       }
 
       try {
-        const res = await fetch("http://localhost:5000/api/solved", {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/solved`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`

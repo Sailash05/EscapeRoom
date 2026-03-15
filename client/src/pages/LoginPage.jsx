@@ -20,7 +20,7 @@ const LoginPage = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/login", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
